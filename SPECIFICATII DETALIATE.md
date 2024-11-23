@@ -1,4 +1,4 @@
-#Etapele dezvoltarii proiectului
+<h1><b>Etapele dezvoltarii proiectului</h1>b></h1>
 1. Template Pagini Web *Home Page*. Creare si testare functionalitati de logare si sesiuni
   - Creearea bazei de date in MySQL cu tabelele necesare (vezi https://github.com/TRBogdann/Aplicatie-Notite/blob/main/schemaBazeiDeDate.jpeg)
   - Creearea obiectelor in JS
