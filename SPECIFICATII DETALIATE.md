@@ -7,7 +7,9 @@
   - Creearea elemetelor CSS de baza
   - Crearea legaturii dintre BackEnd(BD) si FrontEnd (pag web) folosind REST API
   - Implementare functionalitate Login folosind legatura REST si testarea ei
+    
   <br>
+  
 2. Intrumente de parsare format md (testarea implementarii acestora in pagina)
   - Adaugarea Atasamentelor
   - Adaugare componente iframe pe baza notitelor
