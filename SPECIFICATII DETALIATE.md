@@ -5,9 +5,13 @@
   - Creearea paginii HTML
   - Creearea elemetelor CSS de baza
   - Crearea legaturii dintre BackEnd(BD) si FrontEnd (pag web) folosind REST API
-2. Intrumente de parsare format md
-2.1  Adaugarea Atasamentelor
-2.2 Adaugare componente iframe pe baza notitelor
+  - Implementare functionalitate Login folosind legatura REST si testarea ei
+2. Intrumente de parsare format md (testarea implementarii acestora in pagina)
+  - Adaugarea Atasamentelor
+  - Adaugare componente iframe pe baza notitelor
 3. Pagina editare,stergere,creare notite
+  - Creaarea in FrontEnd a Obiectului Pagina
+  - Implementarea instrumentelor de md realizate in pasul anterior
+  - Crearea functiilor de *Creare*
 4. Functionalitate Partajare
 5. Implementarea grupurilor
