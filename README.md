@@ -25,6 +25,9 @@ vizualizeaza aceiasi notita. <br>
 Notițele pot fi structurate pe categorii (materii), date, etichete sau cuvinte-cheie, facilitând regăsirea rapidă a informațiilor.
 
 Tehnologii Utilizate:
+
 Fontend: ReactJs, HTML, CSS, JS
+
 Backend: NodeJs, Express, BCrypt, ExpressSessions
+
 Baze de Date: MySql
