@@ -2,6 +2,7 @@
 Grupa 1101 - Echipa 2AB
 
 #Descriere Backend
+
 Backend ul va contine utilitati ce permit logarea cu mail ul institutional, salvarea documentelor atasat, crearea grupurilor si pentru partajarea notitelor
 si implementarea unui de "ownership" pentru acestea.
 
