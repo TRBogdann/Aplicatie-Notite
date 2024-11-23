@@ -12,6 +12,6 @@
 3. Pagina editare,stergere,creare notite
   - Creaarea in FrontEnd a Obiectului Pagina
   - Implementarea instrumentelor de md realizate in pasul anterior
-  - Crearea functiilor de *Creare*
+  - Crearea functiilor de <tab>Creare</tab>
 4. Functionalitate Partajare
 5. Implementarea grupurilor
