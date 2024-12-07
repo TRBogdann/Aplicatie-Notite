@@ -1,0 +1,23 @@
+
+.signup_container
+{
+
+}
+
+.signup_container>form
+{
+    display: flex;
+    background-color: purple;
+    width: 50vw;
+    margin-left:25vw;
+    height:50vh;
+    margin-top: 25vh;
+    flex-direction: column;
+}
+
+.signup_container>form>div
+{
+    display: flex;
+    flex-direction: column;
+}
+
