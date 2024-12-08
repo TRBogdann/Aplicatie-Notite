@@ -4,7 +4,7 @@ import './signup.css'
 function SignUp()
 {
     const [userData,setUserData] =useState({
-        fistname:"",
+        firstname:"",
         lastname:"",
         username:"",
         email:"",
@@ -44,7 +44,7 @@ function SignUp()
         <div>
         <label>First Name</label>
         <input type="text" onChange={(ev)=>{
-            userData.fistname = ev.target.value;
+            userData.firstname = ev.target.value;
             setUserData(userData)
         }}></input>
         </div>
