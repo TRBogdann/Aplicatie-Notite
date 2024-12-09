@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Input Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="date" id="date"></div>
+    <form>
+        <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject">
+        </div>
+        <div class="form-group">
+            <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <input type="text" id="tags" name="tags" placeholder="Tags">
+        </div>
+        <div class="form-group">
+            <input type="text" id="keywords" name="keywords" placeholder="Keywords">
+        </div>
+        <div class="form-group">
+            <textarea id="content" name="content" placeholder="Text..."></textarea>
+        </div>
+        <button id="save">Save</button>
+    </form>
+    <script>
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().split('T')[0];
+        document.getElementById('date').textContent = `Date: ${formattedDate}`;
+    </script>
+</body>
+</html>
