@@ -48,7 +48,7 @@ router.post('/',async(req,res)=>{
         const verifyRequest = new UserRequest(user.getId(),"mail_verif");
         await request_model.createRequest(verifyRequest);
 
-        SendEmail(user.email,"Verification Code",verifyRequest.token,"Verification Email");
+        SendEmail(user.email,"Verification Code","Use this link to verify your email: http://localhost:2020/verifymail/"+verifyRequest.token,"Verification Email");
         
         res.status(200).send("Account created successfully");
     }
