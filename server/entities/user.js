@@ -17,7 +17,7 @@ class User
         
     }
     constructor(formData,passHash)
-    {
+    {   
         if(typeof formData == "object")
         {
             this.#user_id = User.createId();
@@ -30,10 +30,13 @@ class User
         else
             throw new Server_Error("Invalid Reached the Server",403);
     }
+
+
     static createInstance()
     {
-
+       
     }
+
 
     static async getHash(password)
     {

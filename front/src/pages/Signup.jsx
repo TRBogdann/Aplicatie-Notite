@@ -9,7 +9,7 @@ function SignUp()
         username:"",
         email:"",
         password:"",
-        confirmPasword:"",
+        confirmPassword:"",
     });
 
     function checkData(data)
@@ -84,7 +84,7 @@ function SignUp()
         <label>Confirm Password</label>
         <input type="password"
         onChange={(ev)=>{
-            userData.confirmPasword = ev.target.value;
+            userData.confirmPassword = ev.target.value;
             setUserData(userData)
         }}></input>
         </div>
