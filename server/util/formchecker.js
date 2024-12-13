@@ -48,9 +48,24 @@ const formchecker = (function()
 
         return 0;
     }
+
+    function checkLogin(form)
+    {
+        if (typeof form.username !== "string") return 1;
+        if (typeof form.password !== "string") return 1;
+
+        if (form.username.length > 120 || form.username.length<1) return 2;
+        if (form.password.length > 100 || form.password.length<8) return 2;
+
+        if (form.password.includes(" ")) return 2;
+
+        return 0;
+    }
+    
     return{
         checkForm:checkForm,
-        checkEmail:checkEmail
+        checkEmail:checkEmail,
+        checkLogin:checkLogin
     }
 })()
 

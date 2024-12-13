@@ -2,6 +2,7 @@ const DataBase = require('../util/database')
 const User = require('../entities/user');
 const formchecker = require('../util/formchecker');
 const Server_Error = require('../util/errors');
+const encrypt = require('../util/encryptor');
 
 class UserModel
 {
@@ -60,6 +61,26 @@ class UserModel
     async verify(user_id)
     {
         this.#database.runQuery(`UPDATE USERS SET verified = 1 WHERE user_id = '${user_id}'`);
+    }
+
+    async getUser(username,password)
+    {
+        const result = await this.#database.runQuery(`SELECT * FROM USERS WHERE username='${username}' OR email='${username}';`);
+        
+        if(result.length==0)
+            return undefined;
+        
+        const verified = result[0]['verified'];
+        const hash = result[0]['passward_hash'];
+        const valid = encrypt.checkPassword(password,hash);
+
+        if(verified == 0)
+            return "";
+
+        if(valid)
+            return User.createInstance(result[0]);
+
+        return null;
     }
 }   
 

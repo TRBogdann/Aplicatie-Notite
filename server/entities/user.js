@@ -32,9 +32,19 @@ class User
     }
 
 
-    static createInstance()
+    static createInstance(queryRow)
     {
-       
+        const user = new User({},"");
+        user.#user_id = queryRow['user_id'];
+        user.lastName = queryRow['last_name'];
+        user.firstName = queryRow['first_name'];
+        user.passHash = "";
+        user.email = queryRow['email'];
+        user.username = queryRow['username'];
+        user.#profile_image = queryRow['profile_image'];
+        user.#creation_date = queryRow['creation_date'];
+        user.#verifed = queryRow['verified'];
+        return user;
     }
 
 
