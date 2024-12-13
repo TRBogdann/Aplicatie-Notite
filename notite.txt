@@ -13,3 +13,24 @@ Sign Up
 
 Home Page
 1.Daca nu exista sesiune sau sesiunea e expirata user ul va fi trimis la LogIn (acleasi mesaj: Session expired...)
+
+...
+
+Pages:
+1. Login
+2. Sign Up
+3. Home Page
+4. Group
+5. Editare Notita
+6. Vizualizare Notita
+7. Setari profil
+
+Backend:
+1. Log In
+2. Sign Up
+3. Cleaneer
+4. Email Verfication
+5. Change Password
+6. Get Data Using Session
+7. Edit Note
+8. Join/Create Group
