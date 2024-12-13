@@ -1,0 +1,15 @@
+
+Login
+
+1.Daca status ul e 200 se va salva sesiunea
+2.Daca status ul ul nu e 200 se va afisa un mesaj (mesaj creat cu useState)
+3.Daca Sesiunea exista si e corecta se va redicrectiona spre home
+4.Daca Sesiunea ne exista sau nu e corecta va fi streasa din browser si mesajul parintelui va deveni "Session Expired or Invalid"
+
+
+Sign Up
+1.Dupa sign up user ul va fi redicrectionat spre Login , mesajul parintelul va fi "Verify your email"
+2.Validari 
+
+Home Page
+1.Daca nu exista sesiune sau sesiunea e expirata user ul va fi trimis la LogIn (acleasi mesaj: Session expired...)
