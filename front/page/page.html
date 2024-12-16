@@ -8,25 +8,35 @@
 </head>
 <body>
     <div class="date" id="date"></div>
-    <form>
+    <form id = "page-form">
         <div class="form-group">
-            <input type="text" id="subject" name="subject" placeholder="Subject">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
         </div>
         <div class="form-group">
-            <input type="text" id="title" name="title" placeholder="Title">
+            <input type="text" id="title" name="title" placeholder="Title" required>
         </div>
         <div class="form-group">
-            <input type="text" id="tags" name="tags" placeholder="Tags">
+            <input type="text" id="tags" name="tags" placeholder="Tags" required>
         </div>
         <div class="form-group">
-            <input type="text" id="keywords" name="keywords" placeholder="Keywords">
+            <input type="text" id="keywords" name="keywords" placeholder="Keywords" required>
         </div>
         <div class="form-group">
-            <textarea id="content" name="content" placeholder="Text..."></textarea>
+            <textarea id="content" name="mainText" placeholder="Text..." required></textarea>
         </div>
-        <button id="save">Save</button>
+        <!-- <button id="save" type="submit">Save</button>
+        <button id="edit" type="submit">Edit</button> -->
     </form>
-    <script>
+    <button id="save" type="submit" name="saveBTN">Save</button>
+    <button id="edit" type="submit" name="editBTN">Edit</button>
+    <script type="module">
+        import {Page} from "./srcipt.js";
+
+        const pagine = new Page();
+        pagine.btnSave.addEventListener("click",(event) =>{ event.preventDefault(); pagine.save();});
+        pagine.btnEdit.addEventListener("click",(event) =>{ event.preventDefault(); pagine.edit();});
+
+
         const currentDate = new Date();
         const formattedDate = currentDate.toISOString().split('T')[0];
         document.getElementById('date').textContent = `Date: ${formattedDate}`;
