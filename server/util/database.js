@@ -33,6 +33,17 @@ class DataBase
           });
         });
       }
+
+    runQueryParams(query,params=[])
+    {
+      return new Promise((resolve, reject) => {
+        this.#connection.query(query,params, (err, result) => {
+          if (err) reject(err);
+          resolve(result);
+        });
+      });
+    }
+    
 }
 
 module.exports = DataBase;

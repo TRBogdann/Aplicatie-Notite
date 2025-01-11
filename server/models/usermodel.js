@@ -60,7 +60,7 @@ class UserModel
 
     async verify(user_id)
     {
-        this.#database.runQuery(`UPDATE USERS SET verified = 1 WHERE user_id = '${user_id}'`);
+        await this.#database.runQuery(`UPDATE USERS SET verified = 1 WHERE user_id = '${user_id}'`);
     }
 
     async getUser(username,password)

@@ -9,6 +9,10 @@ const SessionModel = require('./models/sessionmodel');
 const UserModel = require('./models/usermodel');
 const GroupModel = require('./models/groupmodel');
 const Group = require('./entities/group');
+const Note = require('./entities/note');
+const Atachment = require('./entities/atachment');
+const NoteModel = require('./models/notemodel');
+const AtachmentModel = require('./models/attachmentmodel');
 
 const connectionInfo = 
 {
@@ -23,6 +27,9 @@ const db = new DataBase(connectionInfo,'Sessions');
 const model = new SessionModel(db);
 const usermodel = new UserModel(db);
 const groupsmodel = new GroupModel(db);
+const notemodel = new NoteModel(db);
+const fileModel = new AtachmentModel(db);
+
 
 
 router.post("/",async (req,res)=>
@@ -162,6 +169,64 @@ router.post("/friends",async (req,res)=>
             }
         }
     });
+
+
+    router.post("/addnote",async (req,res)=>
+        {
+            try
+            {
+                if(typeof req.body.id !=='string')
+                    throw new Server_Error("Invalid Data Reached The Server",403);
+
+                const userIp= req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+                let result = await model.validSession(req.body.id,userIp);
+                
+                if(!result)
+                {
+                    throw new Server_Error("Invalid Data Reached The Server",403);
+                }
+        
+                let user = await usermodel.sessionGetUser(req.body.id,userIp);
+        
+                if(user == null)
+                {
+                    throw new Server_Error("Session exists, User not found",500);
+                }
+                
+                
+                const note = new Note(JSON.parse(req.body.note),user.getId());
+                const files = []
+                for(const it of JSON.parse(req.body.files))
+                {
+                    const file = new Atachment(it,note.getNoteId());
+                    files.push(file);
+                }
+
+                await notemodel.createNote(note);
+                for(const it of files)
+                {
+                    await fileModel.createAttachment(it);
+                }
+                
+            }
+            catch(err)
+            {
+                if(err.status!=undefined)
+                {
+                    if(err.status>=500) 
+                        log.print("Session",err.message);
+        
+                    res.status(err.status).send(err.message);
+                }
+                else
+                {
+                    log.print("Session","Undefiend Error");
+                    log.print("Session",err.message);
+                    res.status(500).send("Internal Sever Problem");
+                }
+            }
+        });
+    
 
 
 module.exports = router;

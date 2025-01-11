@@ -32,7 +32,7 @@ class GroupModel
      */
     async createGroup(group)
     {
-        this.#database.runQuery(`INSERT INTO NGROUPS VALUES('${group.getGroupId()}','${group.group_name}',null,'${group.group_description}',CURRENT_TIMESTAMP,'${group.getAdminId()})`);
+        await this.#database.runQuery(`INSERT INTO NGROUPS VALUES('${group.getGroupId()}','${group.group_name}',null,'${group.group_description}',CURRENT_TIMESTAMP,'${group.getAdminId()})`);
     }
     
     #database;

@@ -18,7 +18,7 @@ class RequestModel
      */
     async createRequest(req)
     {
-        this.#database.runQuery(`INSERT INTO REQUESTS VALUES('${req.token}','${req.requestType}','${req.userId}',CURRENT_TIMESTAMP);`)
+        await this.#database.runQuery(`INSERT INTO REQUESTS VALUES('${req.token}','${req.requestType}','${req.userId}',CURRENT_TIMESTAMP);`)
     }
 
     /**
@@ -27,7 +27,7 @@ class RequestModel
      */
     async deleteRequest(token)
     {
-        this.#database.runQuery(`DELETE FROM REQUESTS WHERE token='${token}'`);
+        await this.#database.runQuery(`DELETE FROM REQUESTS WHERE token='${token}'`);
     }
 
     /**
@@ -48,7 +48,7 @@ class RequestModel
 
     async deleteRequest(token)
     {
-        this.#database.runQuery(`DELETE FROM REQUESTS WHERE token='${token}'`);
+        await this.#database.runQuery(`DELETE FROM REQUESTS WHERE token='${token}'`);
     }
     #database;
 }

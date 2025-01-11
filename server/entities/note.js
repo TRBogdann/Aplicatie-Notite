@@ -46,6 +46,11 @@ class Note
         return this.#note_id;
     }
 
+    static createInstance(queryRow)
+    {
+        
+    }
+
     #note_id;
     #creation_date="";
     #user_id

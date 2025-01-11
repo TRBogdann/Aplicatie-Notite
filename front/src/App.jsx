@@ -3,6 +3,7 @@ import './App.css'
 
 import LogSign from './pages/LogSign'
 import Mainpage from './pages/Mainpage'
+import EditNote from './pages/EditNote';
 
 function App() {
 
@@ -52,6 +53,9 @@ function App() {
   {
     case "/logsign":
       currentPage = <LogSign/>;
+      break;
+    case "/editnote":
+      currentPage = <EditNote/>;
       break;
     default:
       currentPage = <Mainpage/>;

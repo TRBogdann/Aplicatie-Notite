@@ -44,6 +44,11 @@ class Atachment
         return this.#file_id;
     }
 
+    static createInstance(queryRow)
+    {
+        
+    }
+    
     #file_id;
     #creation_date="";
     #note_id;
