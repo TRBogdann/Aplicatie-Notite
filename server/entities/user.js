@@ -41,7 +41,7 @@ class User
         user.passHash = "";
         user.email = queryRow['email'];
         user.username = queryRow['username'];
-        user.#profile_image = queryRow['profile_image'];
+        user.profile_image = queryRow['profile_image'];
         user.#creation_date = queryRow['creation_date'];
         user.#verifed = queryRow['verified'];
         return user;
@@ -58,8 +58,12 @@ class User
         return this.#user_id;
     }
     
+    getCreationDate()
+    {
+        return this.#creation_date;
+    }
     #user_id;
-    #profile_image = null;
+    profile_image = null;
     #creation_date = "";
     #verifed = 0;
 }

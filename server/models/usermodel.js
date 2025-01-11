@@ -72,7 +72,7 @@ class UserModel
         
         const verified = result[0]['verified'];
         const hash = result[0]['passward_hash'];
-        const valid = encrypt.checkPassword(password,hash);
+        const valid = await encrypt.checkPassword(password,hash);
 
         if(verified == 0)
             return "";
@@ -81,6 +81,32 @@ class UserModel
             return User.createInstance(result[0]);
 
         return null;
+    }
+
+    async sessionGetUser(session_id,user_ip)
+    {
+        let result = await this.#database.runQuery(`SELECT us.* FROM USERS us JOIN SESSIONS s ON us.user_id = s.user_id WHERE session_id='${session_id}' AND user_ip='${user_ip}'`); 
+        if(result.length < 1)
+            return null;
+        else 
+            return User.createInstance(result[0]);
+    }
+
+    async getFriends(user_id)
+    {
+
+        const result1 = await this.#database.runQuery(`SELECT u.* FROM FRIENDS f JOIN USERS u on f.user2_id = u.user_id WHERE f.user1_id = '${user_id}'`); 
+        const result2 = await this.#database.runQuery(`SELECT u.* FROM FRIENDS f JOIN USERS u on f.user1_id = u.user_id WHERE f.user2_id = '${user_id}'`); 
+        const friends = [];
+        for(const it of result1)
+        {
+            friends.push(User.createInstance(it));
+        }
+        for(const it of result2)
+        {
+            friends.push(User.createInstance(it));
+        }
+        return friends;
     }
 }   
 

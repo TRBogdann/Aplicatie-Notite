@@ -10,7 +10,7 @@ class UserRequest
 
     genToken()
     {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*.#@$*^%+_!~?<>';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const time = new Date();
         let result = this.requestType+time.getFullYear()+time.getMonth()+time.getDay()+
                         time.getHours()+time.getMinutes()+time.getSeconds()+time.getMilliseconds();

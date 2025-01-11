@@ -9,6 +9,7 @@ const cors = require('cors');
 const signupRouter = require('./signup');
 const verifyRouter = require('./verifyemail')
 const loginRouter = require('./login'); 
+const sessionRouter = require('./session');
 
 const app = express();
 const upload = multer();
@@ -20,6 +21,6 @@ app.use(upload.none());
 app.use('/signup',signupRouter);
 app.use('/verifymail',verifyRouter);
 app.use('/login',loginRouter);
-
+app.use('/session',sessionRouter);
 
 app.listen(2020);

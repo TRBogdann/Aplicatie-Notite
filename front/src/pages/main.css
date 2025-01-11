@@ -1,0 +1,160 @@
+
+.mainContainer
+{
+    width:99vw;
+    height:99vh;
+    background: transparent;
+    border: 2px solid var(--col_b);
+    box-shadow: var(--col_g) 0px 54px 55px, 
+                var(--col_g) 0px -12px 30px, 
+                var(--col_g) 0px 4px 6px, 
+                var(--col_g) 0px 12px 13px, 
+                var(--col_g) 0px -3px 5px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.profilePic
+{
+    object-fit: cover;
+    width:5.5rem;
+    height:5.5rem;
+    margin-top:1vw;
+    border-radius: 50%;
+    margin-right:0.5rem;
+}
+
+.profilePic:hover
+{
+    border: 2px solid var(--col_b);
+}
+
+.userData
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.userDataName
+{
+    margin-top: 0.5rem;
+    text-shadow: var(--col_d) 0.1rem 0 0.5rem;
+}
+.navBar
+{
+    overflow: scroll;
+    height:100%;
+    width:14rem;;
+
+}
+
+.navButtons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+.navButtons>button
+{
+    position: relative;
+    background: transparent;
+    border: 2px solid var(--col_b);
+    outline: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: var(--col_c);
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.navButtons>button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(var(--col_a), var(--col_b), var(--col_a), var(--col_b));
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+.navButtons>button:hover{
+  text-shadow: var(--col_d) 0.1rem 0 0.5rem;
+}
+
+
+.navButtons>button:hover::before {
+    top: 0;
+  }
+
+.noteContainer
+{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.noteBar
+{
+
+    width:100%;
+    height:10%;
+    background-color: var(--col_e);
+    display: flex;
+    justify-content: flex-end;
+    overflow: visible;
+}
+.navBar:hover
+{
+    overflow-y: visible;
+}
+.noteView
+{
+    height:90%;
+    width: 100%;
+    background-color: var(--col_f);
+    
+}
+
+.viewContainer
+{
+    padding-top: 1rem;
+}
+
+.addContainer
+{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.addContainer>button
+{
+    border:none;
+    background-color: transparent;
+    height:100%;
+    width:3rem;
+    font-size: 3rem;
+    text-justify: center;
+    text-align: center;
+}
+
+.addContainer>div
+{
+    height:5rem;
+    width:3rem;
+    position: absolute;
+
+    margin-top: 9.9vh;
+}
+

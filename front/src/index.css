@@ -10,10 +10,37 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --col_a:#874ccc;
+  --col_b:#f27bbd;
+  --col_c:#fff;  
+  --col_d:#FC0;
+  --col_e:#000000;
+  --col_f:bisque;
+  --col_g:#074f63;
 }
 
 *,*::after,*::before
 {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scrollbar-color: var(--col_c) transparent;
+  scrollbar-width:thin;
+}
+
+body {
+  --col_a:#0b0c10;
+  --col_b:#012833;
+  --col_c:#c5c6c7;  
+  --col_d:#66fcf1;
+  --col_e:#0b0c10;
+  --col_f:#012833;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--col_a);
 }
