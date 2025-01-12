@@ -48,7 +48,16 @@ class Note
 
     static createInstance(queryRow)
     {
+        const note = new Note({},"");
         
+        note.#note_id = queryRow['note_id'];
+        note.#user_id = queryRow['user_id'];
+        note.cuvinte_cheie = queryRow['cuvinte_cheie'];
+        note.md_data = queryRow['md_data'];
+        note.mod_partajare = queryRow['mod_partajare'];
+        note.#creation_date = queryRow['creation_date'];
+
+        return note;
     }
 
     #note_id;

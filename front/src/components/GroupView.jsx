@@ -17,7 +17,7 @@ function Groupview(props)
 
 
     return (
-        <div className="groupViewItem">
+        <div className="groupViewItem" onClick={destructor.onClick}>
         <img src={grImg}></img>
         <div className='groupName'>{group.group_name}</div>
         </div>

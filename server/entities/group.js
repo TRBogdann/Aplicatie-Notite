@@ -47,12 +47,13 @@ class Group
     {
         const res = new Group({},"");
         res.#admin_id = queryRow['admin_id'];
-        res.#group_id = queryRow['group_id'];
+        res.#group_id = queryRow['ngroup_id'];
         res.#creation_date = queryRow['creation_date'];
         res.group_name = queryRow['group_name'];
         res.group_image = queryRow['group_image'];
         res.group_description = queryRow['group_description']
 
+    
         return res;
     }
     

@@ -227,7 +227,116 @@ router.post("/friends",async (req,res)=>
             }
         });
     
+        router.post("/searchnotes",async (req,res)=>
+            {
+                try
+                {
+                    if(typeof req.body.id !=='string')
+                        throw new Server_Error("Invalid Data Reached The Server",403);
+    
+                    const userIp= req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+                    let result = await model.validSession(req.body.id,userIp);
+                    
+                    if(!result)
+                    {
+                        throw new Server_Error("Invalid Data Reached The Server",403);
+                    }
+            
+                    let user = await usermodel.sessionGetUser(req.body.id,userIp);
+                    
+                    let notes;
+                    
+                    if(typeof req.body.search == "string" && req.body.search!=="")
+                    {
+                        notes = await notemodel.getNotes(req.body.search,'group');
+                    }
+                    else
+                    {
+                        notes = await notemodel.getNotes(user.getId(),'user');
+                    }
+                    
+                    let jsonRes = {notes:[]}
 
+                    for(const it of notes)
+                    {
+                        jsonRes.notes.push({
+                                note_id:it.getNoteId(),
+                                user_id:it.getUserId(),
+                                md_data:it.md_data,
+                                creation_date:it.getCreationDate,
+                                mod_partajare:it.mod_partajare,
+                                cuvinte_cheie:it.cuvinte_cheie,
+                                creation_date:it.getCreationDate()
+                            });
+
+                    }
+
+                    res.status(200).send(JSON.stringify(jsonRes));
+                }
+                catch(err)
+                {
+                    if(err.status!=undefined)
+                    {
+                        if(err.status>=500) 
+                            log.print("Session",err.message);
+            
+                        res.status(err.status).send(err.message);
+                    }
+                    else
+                    {
+                        log.print("Session","Undefiend Error");
+                        log.print("Session",err.message);
+                        res.status(500).send("Internal Sever Problem");
+                    }
+                }
+            });
+        
+            router.post("/user",async (req,res)=>
+                {
+                    try
+                    {
+                        if(typeof req.body.id !=='string')
+                            throw new Server_Error("Invalid Data Reached The Server",403);
+        
+                        const userIp= req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+                        let result = await model.validSession(req.body.id,userIp);
+                        
+                        if(!result)
+                        {
+                            throw new Server_Error("Invalid Data Reached The Server",403);
+                        }
+                
+                        const user = await usermodel.sessionGetUser(req.body.id,userIp);
+                        
+                        let jsonRes = {
+                            user_id:user.getId(),
+                            username:user.username,
+                            first_name:user.firstName,
+                            last_name:user.lastName,
+                            email:user.email,
+                            creation_date:user.getCreationDate(),
+                            profile_image:user.profile_image
+                        }
+    
+                        res.status(200).send(JSON.stringify(jsonRes));
+                    }
+                    catch(err)
+                    {
+                        if(err.status!=undefined)
+                        {
+                            if(err.status>=500) 
+                                log.print("Session",err.message);
+                
+                            res.status(err.status).send(err.message);
+                        }
+                        else
+                        {
+                            log.print("Session","Undefiend Error");
+                            log.print("Session",err.message);
+                            res.status(500).send("Internal Sever Problem");
+                        }
+                    }
+                });
 
 module.exports = router;
 

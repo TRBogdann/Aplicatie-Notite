@@ -15,7 +15,7 @@ function Friendsview(props)
 
     return(
         <div className="friendViewItem">
-        <img src={profile} ></img>
+        <img src={profile}></img>
         <div className='friendName'>{friend.username}</div>
         </div>
     )
