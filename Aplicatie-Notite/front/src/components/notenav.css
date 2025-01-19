@@ -1,0 +1,116 @@
+
+.noteNav
+{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    align-items:  center;
+    justify-content: space-between;
+    padding:1.5rem;
+}
+
+.buttonTemplateRound
+{
+    border:none;
+    border-radius: 50%;
+    width:2rem;
+    height:2rem;
+    color:var(--col_c);
+    background-color: var(--col_f);
+    font-size: 1.2rem;
+}
+
+.buttonTemplateRound:hover
+{
+    color:var(--col_d);
+    box-shadow: var(--col_g) 0px 54px 55px, 
+    var(--col_g) 0px -12px 30px, 
+    var(--col_g) 0px 4px 6px, 
+    var(--col_g) 0px 12px 13px, 
+    var(--col_g) 0px -3px 5px;
+}
+
+.searchBar
+{
+    display: flex;
+}
+
+.searchBar>input
+{
+    background-color: transparent;
+    height: 1.5rem;
+    width:11rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    border:none;
+    border-radius: 1rem;
+    padding-left
+    :1rem;
+}
+
+.searchBar>.buttonTemplate
+{
+    margin-left:0.5rem;
+}
+
+.applyFilter
+{
+    box-shadow: 
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    width:15rem;
+    height:15rem;
+    border-radius: 1rem;
+    background-color: var(--col_a);
+    position: absolute;
+    margin-top:2rem;
+    margin-left: 9rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.applyFilter>.buttonTemplate
+{
+    margin: 0;
+}
+
+.applyFilter>div
+{
+    display: flex;
+    flex-direction: column;
+}
+.applyFilter>div>input
+{
+    background-color: transparent;
+    height: 1.5rem;
+    width:100%;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    border:none;
+    border-radius: 1rem;
+    padding-left
+    :1rem;
+    margin-bottom:1rem ;
+}
+
+.applyFilter>div>label
+{
+    margin-bottom:0.5rem ;
+}
+.hiddenItem
+{
+    display: none;
+}

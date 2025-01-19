@@ -1,0 +1,75 @@
+
+.noteViewItem
+{
+    width:13rem;
+    height:13rem;
+    padding-top:1rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-bottom:0.3rem;
+    margin:1rem;
+    border-radius:1rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+.noteViewItem:hover
+{
+    box-shadow: var(--col_g) 0px 54px 55px, 
+                var(--col_g) 0px -12px 30px, 
+                var(--col_g) 0px 4px 6px, 
+                var(--col_g) 0px 12px 13px, 
+                var(--col_g) 0px -3px 5px;
+}
+
+.notePreview
+{
+    overflow: hidden;
+    height:100%;
+}
+
+.noteFooter
+{
+
+    font-size: 0.5rem;
+    display: flex;
+    width:100%;
+    align-items: center;
+    height:2rem;
+
+}
+
+
+.edContainer
+{
+    
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: flex-end;
+    width:100%;
+    height:2rem;
+
+}
+
+.noteFooter>span
+{
+    min-width: fit-content;
+}
+
+.edContainer>img
+{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    height:1.4rem;
+
+}
+
+.edContainer>img:hover
+{
+    height:2rem;
+    background-color: var(--col_c);
+    border-radius:50%;
+}
+
