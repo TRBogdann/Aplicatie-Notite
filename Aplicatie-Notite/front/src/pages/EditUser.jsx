@@ -45,6 +45,7 @@ const handleEdit = () => {
 
   return (
     <div id="body">
+        <h1>Welcome, {currentUser?.username || "default_username"}!</h1>
         <canvas id="pfp">
         {currentUser?.photoUrl && (
             <img id="pfp" src={currentUser.photoUrl} alt="Profile"/>
