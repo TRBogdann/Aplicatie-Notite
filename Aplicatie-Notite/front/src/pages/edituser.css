@@ -1,0 +1,137 @@
+#pfp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* Make it a circle */
+  border: 1px solid #ccc; /* Optional: Add a border */
+  background-color: #f0f0f0; /* Light background for the placeholder */
+  margin: 0 auto 30px; /* Center horizontally and add some bottom margin */
+  /* margin-top: 1%; */
+}
+
+#credentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pfp img {
+  border-radius: 50%; /* Make the image itself a circle */
+  width: 100%; /* Ensure the image fits within the canvas */
+  height: 100%; /* Ensure the image fits within the canvas */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire canvas */
+}
+
+#username {
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: inline;
+  padding: 5px;
+  border-radius: 10px;
+}
+#password{
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: inline;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#photo {
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: inline;
+  padding: 5px;
+  border-radius: 10px;
+}
+#data {
+  border: 1px solid #ccc; /* Border around the entire div */
+  display: block;
+  max-width: fit-content;
+  margin: 50px auto; /* Center horizontally and add some top margin */
+  border-radius: 10px; /* Optional: Add some rounded corners */
+  padding: 20px; /* Add padding inside the div */
+  background-color: #073bac93; /* Background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a slight box shadow */
+  background: linear-gradient(to bottom,rgba(130, 175, 233, 1) rgb(51, 72, 99), );
+}
+
+/* #data::before,
+#data::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); /* Gradient from darker to lighter */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#data::after {
+  top: auto;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); 
+}
+  */
+ 
+
+  #body {
+    background-color: rgb(130, 175, 233); /* Background color for the body */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the div covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure pseudo-elements are positioned relative to this div */
+  }
+  
+  #body::before,
+  #body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); /* Gradient from darker to lighter */
+  }
+  
+  #body::before {
+    top: 0;
+    left: 0;
+  }
+  
+  #body::after {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); /* Gradient from darker to lighter */
+  }
+  
+  #body::before::before,
+  #body::after::after {
+    content: '';
+    position: absolute;
+    width: 40px; /* Adjust the width as needed */
+    height: 100%;
+    background: linear-gradient(to right, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); /* Gradient from darker to lighter */
+  }
+  
+  #body::before::before {
+    top: 0;
+    left: 0;
+  }
+  
+  #body::after::after {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, rgba(4, 5, 40, 1), rgba(130, 175, 233, 0)); /* Gradient from darker to lighter */
+  }
+  
+
+#edit{
+  margin: 5px;
+}
