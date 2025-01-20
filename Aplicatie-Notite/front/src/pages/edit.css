@@ -1,0 +1,224 @@
+
+.editForm
+{
+    
+    color:var(--col_d);
+    width:60rem;
+    min-height: 70rem;
+    margin:5rem;
+    padding:2rem;
+    border-radius: 2rem;
+    box-shadow: 
+    var(--col_c) 0px 5px 6px, 
+    var(--col_b) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+.editForm>div
+{
+
+    padding: 2rem;;
+    box-shadow: 
+    var(--col_a) 0px 5px 6px, 
+    var(--col_b) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    width:60rem;
+}
+
+.selectBox
+{
+    justify-content: center;
+    height:4rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.selectBox>input
+{
+    color:var(--col_d);
+    padding:0.3rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    background-color: transparent;
+    border-radius:0.5rem;
+    border:transparent;
+    margin-left:2rem;
+}
+
+.selectBox>.shareChoice
+{
+    background-color: var(--col_b);
+
+}
+
+.selectBox>input:hover
+{
+    background-color: var(--col_b);
+    padding:0.4rem;
+
+}
+
+.filePickLabel
+{
+    padding:0.3rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    background-color: transparent;
+    border-radius:0.5rem;
+    border:transparent;
+}
+
+.filePickLabel:hover
+{
+    background-color: var(--col_b);
+    padding:0.4rem;
+
+}
+
+.addFile
+{
+    color:var(--col_d);
+    padding:0.3rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    background-color: transparent;
+    border-radius:0.5rem;
+    border:transparent;
+    margin-left:2rem;
+
+}
+
+.addFile:hover
+{
+    background-color: var(--col_b);
+    padding:0.4rem;
+
+}
+
+.attachmentBox
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#file-chosen
+{
+    margin-left:2rem;
+}
+
+.fileBox
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttonTemplate
+{
+    color:var(--col_d);
+    padding:0.3rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    background-color: transparent;
+    border-radius:0.5rem;
+    border:transparent;
+    margin-left:2rem;
+}
+.buttonTemplate:hover
+{
+    background-color: var(--col_b);
+    padding:0.4rem;
+}
+
+table, th, td {
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+  }
+
+
+  td
+  {
+    padding: 0.2rem;
+    text-align: center;
+  }
+ 
+  td>button
+  {
+    margin-right: 2rem;
+  }
+
+  .keyWord
+  {
+    background-color: transparent;
+    margin-left:2rem;
+    width:80%;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    border:none;
+    border-radius: 1rem;
+    padding-left
+    :1rem;
+  }
+
+  .keyWord:focus
+  {
+    background-color: var(--col_b);
+  }
+
+  .noteBox
+  {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .mdNote
+{
+  width:100%;
+  min-height: 50rem;
+
+  background-color: transparent;
+  box-shadow:
+  var(--col_b) 0px 5px 6px, 
+  var(--col_d) 0px -1px 4px, 
+  var(--col_b) 0px 1px 1px, 
+  var(--col_b) 0px 2px 2px, 
+  var(--col_b) 0px -1px 1px;
+  border:none;
+  border-radius: 1rem;
+  padding:1rem;
+}
