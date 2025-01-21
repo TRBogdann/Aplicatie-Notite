@@ -46,7 +46,16 @@ class Atachment
 
     static createInstance(queryRow)
     {
-        
+        const instance = new Atachment({},"");
+
+        console.log(queryRow["byte_data"]);
+        instance.#file_id = queryRow["file_id"];
+        instance.name = queryRow["name"];
+        instance.#creation_date = queryRow["creation_data"];
+        instance.#note_id = queryRow["note_id"];
+        instance.byte_data = queryRow["bytE_data"];
+
+        return instance;
     }
     
     #file_id;

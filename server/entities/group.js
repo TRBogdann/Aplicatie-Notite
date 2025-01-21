@@ -6,6 +6,7 @@ class Group
     {
         if(typeof formData =='object')
         {
+            this.group_name = formData.group_name;
             this.#group_id = Group.createId();
             this.group_description = formData.group_description;
             this.#admin_id = user_id;
@@ -16,7 +17,7 @@ class Group
 
     static createId()
     {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*#@$*^%+_!~?<>';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const time = new Date();
         let result = ""+time.getFullYear()+time.getMonth()+time.getDay()+
                         time.getHours()+time.getMinutes()+time.getSeconds()+time.getMilliseconds();

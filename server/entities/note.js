@@ -7,7 +7,7 @@ class Note
 
     static createId()
     {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*#@$*^%+_!~?<>';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*+_!~<>';
         const time = new Date();
         let result = ""+time.getFullYear()+time.getMonth()+time.getDay()+
                         time.getHours()+time.getMinutes()+time.getSeconds()+time.getMilliseconds();

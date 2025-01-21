@@ -114,3 +114,14 @@
 {
     display: none;
 }
+
+.addNewNote
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnContainer>.buttonTemplate
+{
+    margin-left:0.5rem;
+}

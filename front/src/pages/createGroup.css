@@ -1,0 +1,88 @@
+/* #Group_img{
+    margin-left: 60px;
+    margin: 20px;
+} */
+
+#Inputs{
+
+    width: 100%;
+    color:var(--col_d);
+    padding:0.3rem;
+    box-shadow:
+    var(--col_b) 0px 5px 6px, 
+    var(--col_d) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    background-color: transparent;
+    border-radius:0.5rem;
+    border:transparent;
+}
+#G_name{
+    width:60vw;
+    margin:1rem;
+
+}
+
+#G_Members{
+    width:60vw;
+    margin:1rem;
+}
+
+#G_img{
+    width:40rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#group_body{
+    color:var(--col_d);
+    width:60rem;
+    height:30rem;
+    margin:5rem;
+    padding:2rem;
+    border-radius: 2rem;
+    box-shadow: 
+    var(--col_c) 0px 5px 6px, 
+    var(--col_b) 0px -1px 4px, 
+    var(--col_b) 0px 1px 1px, 
+    var(--col_b) 0px 2px 2px, 
+    var(--col_b) 0px -1px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+#btn_submit{
+
+}
+
+#Group_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%; 
+    background-color: #f0f0f0; 
+
+}
+
+#Group_img:hover {
+    background-color: #e0e0e0;
+    background-image: url('./camera_icon_resized.png');
+}
+
+#group_body>form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#group_body>form>.buttonTemplate
+{
+margin: 1rem;
+width:fit-content
+}

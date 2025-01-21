@@ -1,0 +1,74 @@
+
+.paper
+{
+    width:80vw;
+    min-height:80vh;
+    padding-top:1rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-bottom:0.3rem;
+    margin:1rem;
+    border-radius:1rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+.paper>h1
+{
+    width:100%;
+    text-align: center;
+}
+
+.paper>p
+{
+    margin:1rem;
+}
+
+.paper>p::first-letter
+{
+    margin-left:3rem;
+}
+
+.paper>iframe
+{
+    width:100%;
+    border:transparent;
+    border-radius:1rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
+}
+
+.attachmentView
+{
+    display: flex;
+    flex-direction: row;
+}
+.attachmentView>div
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+}
+
+.attachmentView>div>.buttonTemplate
+{
+    margin-left:0.5rem;
+}
+
+.input_search{
+width: 10rem;
+margin-left: 24rem;
+color:var(--col_d);
+padding:0.3rem;
+box-shadow:
+var(--col_b) 0px 5px 6px, 
+var(--col_d) 0px -1px 4px, 
+var(--col_b) 0px 1px 1px, 
+var(--col_b) 0px 2px 2px, 
+var(--col_b) 0px -1px 1px;
+background-color: transparent;
+border-radius:0.5rem;
+border:transparent;
+}
